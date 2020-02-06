@@ -165,6 +165,7 @@ public class JobData {
                 String aPosition = record.get(3);
                 String aSkill = record.get(4);
 
+
                 Employer newEmployer = (Employer) findExistingObject(allEmployers, anEmployer);
                 Location newLocation = (Location) findExistingObject(allLocations, aLocation);
                 PositionType newPosition = (PositionType) findExistingObject(allPositionTypes, aPosition);
@@ -203,6 +204,9 @@ public class JobData {
         }
     }
 
+
+
+
     public static ArrayList<Employer> getAllEmployers() {
         loadData();
         allEmployers.sort(new NameSorter());
@@ -227,5 +231,12 @@ public class JobData {
         return allCoreCompetency;
     }
 
+
+    public static ArrayList<Job> getAllJobs() {
+        loadData();
+        //allJobs.sort(new NameSorter());
+        return allJobs;
+
+    }
 }
 
